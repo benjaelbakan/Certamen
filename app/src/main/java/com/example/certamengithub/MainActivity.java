@@ -1,9 +1,13 @@
 package com.example.certamengithub;
 
+
+//https://github.com/benjaelbakan/Certamen.git
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Adapter;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -13,6 +17,8 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     Spinner sp;
@@ -21,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     EditText Peso, Estatura;
 
-
+    Adapter adapter;
 
 
 
@@ -31,11 +37,19 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
         sp = findViewById(R.id.spinner);
         Peso = findViewById(R.id.txtIngresarPeso);
         Estatura = findViewById(R.id.txtIngresarEstatura);
         IMC = findViewById(R.id.txtMostrarIMC);
         mostrarRangos = findViewById(R.id.txtMostrarRangos);
+
+        ;
+
+        String[] lista = {"Seleccione", "Femenino" , "Masculino"};
+        //no supe como hacer el spinner
+
 
     }
 
